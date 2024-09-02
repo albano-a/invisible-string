@@ -1,0 +1,42 @@
+---
+import "../style/style.css";
+
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import CardLover from "../components/Card-Lover.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <div class="main-content">
+    <h1 class="is-size-1 has-text-centered" style="font-family: Soulmate;">
+      Feliz Aniversário, Ana!!!
+    </h1>
+    <hr />
+    <p
+      class="is-size-3 has-text-centered"
+      style="font-family: IM Fell DW Pica;"
+    >
+      Feliz aniversário meu amor, eu te amo muito! Fiz essa página para
+      comemorar o seu aniversário! 🎉🎉🎉 Possui várias referências do nosso
+      relacionamento, poemas, além de outros easter eggs (hihi). Parabéns pelo
+      seu aniversário meu amor, que seu dia seja muito feliz!
+    </p>
+    <hr />
+    <div class="columns">
+      <div class="column">
+        <Card
+          title="Poema"
+          body="If I'm scared to lose her? Of course I am. Cuz when we're together, is no longer gravity holding me to earth... It's her. Its cuz when she looks at me, she makes me feel like the most important person in the world. She brings out my inner child, she makes me hopeful, and she makes me feel so understood. And inside out, she's the most beautiful thing I have ever experienced. And without her? I fear I'll lose *everything*."
+          href="https://www.poemhunter.com/poem/love-forever-2/"
+        />
+      </div>
+      <div class="column"></div>
+      <div class="column"><CardLover /></div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .main-content {
+  }
+</style>

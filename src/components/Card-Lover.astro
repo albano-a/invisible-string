@@ -1,0 +1,60 @@
+---
+
+---
+
+<div class="card" id="card">
+  <div class="card-content has-shadow">
+    <p class="has-text-weight-bold">
+      I once believed love would be (burning red)<br />But it's <span
+        style="color: gold;">golden</span
+      ><br />Like daylight, like daylight<br />Like daylight, daylight
+    </p>
+  </div>
+</div>
+
+<audio id="hover-audio" src="songs/daylight.mp3"></audio>
+
+<style>
+  .card {
+    background: #d773a7;
+    background: linear-gradient(
+      135deg,
+      rgba(215, 115, 167, 1) 0%,
+      rgba(245, 121, 204, 1) 100%
+    );
+    border-radius: 8px;
+    border: 2px solid #ff82c2;
+    color: rgb(255, 246, 246);
+    margin: 1rem;
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+  .card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 5px 5px rgba(255, 253, 253, 0.5);
+  }
+  .card-content {
+    font-family: "Poppins";
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+</style>
+<script>
+  const cardElement = document.getElementById("card");
+  const hoverAudioElement = document.getElementById(
+    "hover-audio"
+  ) as HTMLAudioElement;
+
+  if (cardElement && hoverAudioElement) {
+    hoverAudioElement.volume = 0.05; // Set the volume to a constant value (0.5 in this case)
+
+    cardElement.addEventListener("mouseenter", function () {
+      hoverAudioElement.play();
+    });
+
+    cardElement.addEventListener("mouseleave", function () {
+      hoverAudioElement.pause();
+      hoverAudioElement.currentTime = 0;
+    });
+  }
+</script>
