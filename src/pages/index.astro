@@ -4,6 +4,7 @@ import "../style/style.css";
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import CardLover from "../components/Card-Lover.astro";
+import CardPoem from "../components/Card-Poem.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -26,12 +27,16 @@ import CardLover from "../components/Card-Lover.astro";
       <div class="column">
         <Card
           title="Poema"
-          body="If I'm scared to lose her? Of course I am. Cuz when we're together, is no longer gravity holding me to earth... It's her. Its cuz when she looks at me, she makes me feel like the most important person in the world. She brings out my inner child, she makes me hopeful, and she makes me feel so understood. And inside out, she's the most beautiful thing I have ever experienced. And without her? I fear I'll lose *everything*."
-          href="https://www.poemhunter.com/poem/love-forever-2/"
+          body="If I'm scared to lose her? Of course I am. Cuz when we're together, is no longer gravity holding me to earth... It's her. Its cuz when she looks at me, she makes me feel like the most important person in the world. She brings out my inner child, she makes me hopeful, and she makes me feel so understood. And inside out, she's the most beautiful thing I have ever experienced. And without her? I fear I'll lose everything."
         />
       </div>
       <div class="column"></div>
       <div class="column"><CardLover /></div>
+    </div>
+    <div class="columns">
+      <div class="column"></div>
+      <div class="column"></div>
+      <div class="column"><CardPoem /></div>
     </div>
   </div>
 </Layout>
