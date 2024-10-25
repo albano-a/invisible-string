@@ -12,8 +12,6 @@
   </div>
 </div>
 
-<audio id="hover-audio" src="songs/daylight.mp3"></audio>
-
 <style>
   .card {
     background: #d773a7;
@@ -38,22 +36,3 @@
     line-height: 1.5;
   }
 </style>
-<script>
-  const cardElement = document.getElementById("card");
-  const hoverAudioElement = document.getElementById(
-    "hover-audio"
-  ) as HTMLAudioElement;
-
-  if (cardElement && hoverAudioElement) {
-    hoverAudioElement.volume = 0.05; // Set the volume to a constant value (0.5 in this case)
-
-    cardElement.addEventListener("mouseenter", function () {
-      hoverAudioElement.play();
-    });
-
-    cardElement.addEventListener("mouseleave", function () {
-      hoverAudioElement.pause();
-      hoverAudioElement.currentTime = 0;
-    });
-  }
-</script>

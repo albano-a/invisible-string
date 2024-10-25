@@ -20,28 +20,144 @@ import CardPoem from "../components/Card-Poem.astro";
       Feliz aniversário meu amor, eu te amo muito! Fiz essa página para
       comemorar o seu aniversário! 🎉🎉🎉 Possui várias referências do nosso
       relacionamento, poemas, além de outros easter eggs (hihi). Parabéns pelo
-      seu aniversário meu amor, que seu dia seja muito feliz!
+      seu aniversário meu amor, que seu dia seja muito feliz! Eu amei os últimos 6 meses com você, e espero ficar com você por muito mais tempo! ❤️❤️❤️
     </p>
     <hr />
     <div class="columns">
+      <div class="column is-flex is-flex-direction-column">
+        <CardLover />
+        <Card
+          title="Poema 2"
+          body="Thank you for being gentle with me. I know life has been cruel to you too, but you still manage to be soft with me. Please never hide yourself whenever you feel sad, and never hide your vulnerability, because I'm always here for you. I love you."
+        />
+        <div class="card">
+          <div class="card-content poema_3">
+            <div class="content">
+              <p class="has-text-centered">
+                Oi amorzinho, eu só queria avisar que eu amo muito vc! eu amo muito seu jeitinho viu, vc tem os olhinhos mais lindos
+                do mundo todinho, e o cabelinho mais bonito de todos. eu te amo ❤️
+              </p>
+            </div>
+          </div>
+        </div>
+        <img
+          src="pics/sunglasses.jpg"
+          alt="Imagem de aniversário"
+          style="max-width: 100%;"
+        />
+      </div>
+      <div class="column">
+        <img
+          src="pics/sitio_october.jpg"
+          alt="Imagem de aniversário"
+          style=""
+        />
+        <br />
+        <div class="card">
+          <div class="card-content joji_1">
+            <div class="content">
+              <p class="has-text-centered">
+                Lost in the blue <br />
+                They don't love me like you do <br />
+                Those chills that I knew <br />
+                They were nothing without you <br />
+                And everyone else <br />
+                They don't matter now <br />
+                You're the one I can't lose <br />
+                No one loves me like you do <br />
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content poema_4">
+            <div class="content">
+              <p class="has-text-centered">
+                I admire you so much for the progress you've been making in your life. Even in your toughest moments, you are quietly overcoming challenges, and becoming a better version of yourself. I hope you take a moment to acknowledge how far you've come and keep pushing forward. <b>I am so proud of you.</b>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="column">
         <Card
           title="Poema"
           body="If I'm scared to lose her? Of course I am. Cuz when we're together, is no longer gravity holding me to earth... It's her. Its cuz when she looks at me, she makes me feel like the most important person in the world. She brings out my inner child, she makes me hopeful, and she makes me feel so understood. And inside out, she's the most beautiful thing I have ever experienced. And without her? I fear I'll lose everything."
         />
+        <CardPoem />
+        <img
+          src="pics/october_1.jpg"
+          alt="Imagem de aniversário"
+          style="max-width: 100%;"
+        />
       </div>
-      <div class="column"></div>
-      <div class="column"><CardLover /></div>
     </div>
-    <div class="columns">
+    <div class="columns is-flex is-flex-direction-column">
       <div class="column"></div>
       <div class="column"></div>
-      <div class="column"><CardPoem /></div>
+      <div class="column"></div>
     </div>
   </div>
 </Layout>
 
 <style>
   .main-content {
+  }
+
+  hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid hsl(0, 0%, 100%);
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 15px;
+  }
+
+  .joji_1 {
+    border: 1px solid hsl(359, 74%, 59%);
+    background-color: hsl(359, 74%, 49%);
+    margin: 1rem 0 1rem 0;
+    padding: 1rem;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .joji_1:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 5px rgba(255, 253, 253, 0.5);
+  }
+
+  .poema_3 {
+    border: 1px solid hsl(221, 94%, 30%);
+    background-color: hsl(221, 94%, 20%);
+    padding: 1rem;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+  }
+  .poema_3:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 5px rgba(255, 253, 253, 0.5);
+  }
+
+  .poema_4 {
+    border: 1px solid #ff2400;
+    background-color: #800000;
+    padding: 1rem;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+  }
+  .poema_4:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 5px rgba(255, 253, 253, 0.5);
   }
 </style>
