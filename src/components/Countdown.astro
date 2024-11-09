@@ -1,0 +1,78 @@
+---
+const targetDate = new Date("2024-06-25T18:30:00-03:00"); // Replace with your target date
+---
+
+<div class="container">
+  <div class="content has-text-centered">
+    <h2 class="">Estamos juntos há:</h2>
+    <div id="countdown">
+      <span class="has-text-weight-bold" id="months"></span> meses
+      <span class="has-text-weight-bold" id="days"></span> dias
+      <span class="has-text-weight-bold" id="hours"></span> horas
+      <span class="has-text-weight-bold" id="minutes"></span> minutos
+      <span class="has-text-weight-bold" id="seconds"></span> segundos
+    </div>
+  </div>
+</div>
+
+<style>
+  #countdown {
+    font-size: 1.5rem;
+  }
+</style>
+
+<script>
+  const targetDate: Date = new Date("2024-06-25T18:30:00-03:00"); // Replace with your target date
+  const monthsElement: HTMLElement | null = document.getElementById("months");
+  const daysElement: HTMLElement | null = document.getElementById("days");
+  const hoursElement: HTMLElement | null = document.getElementById("hours");
+  const minutesElement: HTMLElement | null = document.getElementById("minutes");
+  const secondsElement: HTMLElement | null = document.getElementById("seconds");
+
+  function updateCountdown(): void {
+    const now: Date = new Date();
+    let years: number = now.getFullYear() - targetDate.getFullYear();
+    let months: number = now.getMonth() - targetDate.getMonth();
+    let days: number = now.getDate() - targetDate.getDate();
+    let hours: number = now.getHours() - targetDate.getHours();
+    let minutes: number = now.getMinutes() - targetDate.getMinutes();
+    let seconds: number = now.getSeconds() - targetDate.getSeconds();
+
+    if (seconds < 0) {
+      seconds += 60;
+      minutes--;
+    }
+    if (minutes < 0) {
+      minutes += 60;
+      hours--;
+    }
+    if (hours < 0) {
+      hours += 24;
+      days--;
+    }
+    if (days < 0) {
+      const previousMonth: Date = new Date(
+        now.getFullYear(),
+        now.getMonth(),
+        0
+      );
+      days += previousMonth.getDate();
+      months--;
+    }
+    if (months < 0) {
+      months += 12;
+      years--;
+    }
+
+    months += years * 12;
+
+    if (monthsElement) monthsElement.textContent = months.toString();
+    if (daysElement) daysElement.textContent = days.toString();
+    if (hoursElement) hoursElement.textContent = hours.toString();
+    if (minutesElement) minutesElement.textContent = minutes.toString();
+    if (secondsElement) secondsElement.textContent = seconds.toString();
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown(); // Initial call to display the countdown immediately
+</script>
